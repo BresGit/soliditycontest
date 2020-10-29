@@ -14,7 +14,7 @@ Superior.sol and SuperiorTransparentUpgradableProxy.sol our main simple contract
 
 Openzeppelin Proxy code is centralized. Only the admin can upgrade the proxy implementation at anytime. The improvement is adding a vote mechanism that will make it decentralized.
 
-To be able to upgrade we added a democratic vote system. If you have a token in the ERC20 implementation, that allows you to vote. It doesn't matter how many tokens you are holding, you can only vote once. Of course you can split your tokens in a bunch of address, but that will force you to spend a lot of money in fees. We fixed a minimum value to 1.000 `YES` votes to be able to upgrade (1.000 is the minimum). Administrator can set the value > 1.000. But it should be at least 1.000. The voting period expires or gets cancelled after 7 days. The admisitrator can restart the process again. 
+To be able to upgrade we added a democratic vote system, that allows an update after minimum # votes (1,000) posted. If you have a token in the ERC20 implementation, that allows you to vote. It doesn't matter how many tokens you are holding, you can only vote once. Of course you can split your tokens in a bunch of address, but that will force you to spend a lot of money in fees. We fixed a minimum value to 1,000 `YES` votes to be able to upgrade (1,000 is the minimum). Administrator can set the value > 1,000. But it should be at least 1,000. The voting period expires or gets cancelled after 7 days. The admisitrator can restart the process again. 
 
 When it reaches 1,000 votes anyone can execute `upgradeTo` function. 
 
